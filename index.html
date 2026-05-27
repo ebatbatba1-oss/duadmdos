@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신문 프로필 생성기</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div id="capture-area" class="capture-area">
+            <img src="bg.jpg" alt="배경 신문" class="bg-image">
+
+            <div class="input-overlay black-box">
+                <div contenteditable="true" class="text-input center-text" data-placeholder="이름(나이)"></div>
+            </div>
+
+            <div class="input-overlay gray-box" id="photo-container">
+                <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+                <div class="photo-placeholder" id="photo-trigger">사진 업로드 (클릭)</div>
+                <img id="photo-preview" src="" alt="프로필 사진">
+            </div>
+
+            <div class="input-overlay white-box">
+                <div contenteditable="true" class="text-input multiline" data-placeholder="이곳에 한마디를 작성해주세요."></div>
+            </div>
+        </div>
+
+        <button id="download-btn" class="download-btn">프로필 이미지 저장</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
