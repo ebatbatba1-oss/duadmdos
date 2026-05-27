@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>신문 프로필 생성기</title>
+    <title>여명단 프로필 생성기</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
@@ -13,7 +13,7 @@
             <img src="bg.jpg" alt="배경 신문" class="bg-image">
 
             <div class="input-overlay black-box">
-                <div contenteditable="true" class="text-input center-text" data-placeholder="이름(나이)"></div>
+                <input type="text" class="text-input center-text" placeholder="이름(나이)">
             </div>
 
             <div class="input-overlay gray-box" id="photo-container">
@@ -23,7 +23,7 @@
             </div>
 
             <div class="input-overlay white-box">
-                <div contenteditable="true" class="text-input multiline" data-placeholder="이곳에 한마디를 작성해주세요."></div>
+                <textarea class="text-input multiline" placeholder="이곳에 한마디를 작성해주세요."></textarea>
             </div>
         </div>
 
