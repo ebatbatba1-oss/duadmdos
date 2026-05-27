@@ -110,7 +110,7 @@ body {
     color: #222222;
     font-size: clamp(14px, 3.5vw, 18px);
     line-height: 1.6;
-    text-align: left;
+    text-align: center; /* 텍스트 가운데 정렬 반영 */
 }
 
 /* 텍스트 입력 공통 속성 */
