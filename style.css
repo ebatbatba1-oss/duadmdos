@@ -42,6 +42,7 @@ body {
 .input-overlay {
     position: absolute;
     display: flex;
+    z-index: 10; /* 입력창이 배경이나 다른 요소에 묻히지 않도록 최상단 고정 */
 }
 
 /* 1. 검은 상자 (이름/나이) */
@@ -50,7 +51,6 @@ body {
     left: 20%;
     width: 60%;
     height: 8.5%;
-    /* 수직, 수평 완벽한 가운데 정렬 보장 */
     align-items: center;
     justify-content: center;
 }
@@ -102,7 +102,7 @@ body {
     left: 20%;
     width: 60%;
     height: 18.5%;
-    align-items: flex-start; /* 텍스트가 위에서부터 써지도록 정렬 */
+    align-items: flex-start;
     padding-top: 2%;
 }
 
@@ -116,10 +116,13 @@ body {
 /* 텍스트 입력 공통 속성 */
 .text-input {
     width: 100%;
+    height: 100%;
     border: none;
     outline: none;
     background: transparent;
-    word-break: break-all;
+    font-family: inherit;
+    resize: none; /* textarea 크기 조절 방지 */
+    overflow: hidden; /* textarea 스크롤바 숨김 */
 }
 
 .text-input.center-text {
@@ -127,8 +130,8 @@ body {
 }
 
 /* Placeholder 디자인 (비어있을 때 안내 문구 표시) */
-.text-input:empty:before {
-    content: attr(data-placeholder);
+.text-input::placeholder {
+    color: inherit;
     opacity: 0.5;
 }
 
