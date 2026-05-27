@@ -65,7 +65,7 @@ body {
 .gray-box {
     top: 29.3%;
     left: 25.3%;
-    width: 49.4%;
+    width: 50%;
     height: 28.2%; /* 사진이 1:1 비율 칸을 꽉 채우도록 설정 */
     cursor: pointer;
     background-color: transparent;
